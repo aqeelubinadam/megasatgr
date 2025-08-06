@@ -155,7 +155,7 @@
                             <div class="row g-4">
                                 <div class="col-md-6" style="min-height: 350px;">
                                     <div class="position-relative h-100">
-                                        <img class="position-absolute rounded w-100 h-100" src="img/service-1.jpg"
+                                        <img class="position-absolute rounded w-100 h-100" src="img/service-3.jpg"
                                             style="object-fit: cover;" alt="">
                                     </div>
                                 </div>
@@ -191,7 +191,7 @@
                             <div class="row g-4">
                                 <div class="col-md-6" style="min-height: 350px;">
                                     <div class="position-relative h-100">
-                                        <img class="position-absolute rounded w-100 h-100" src="img/service-3.jpg"
+                                        <img class="position-absolute rounded w-100 h-100" src="img/service-4.jpg"
                                             style="object-fit: cover;" alt="">
                                     </div>
                                 </div>
@@ -209,7 +209,7 @@
                             <div class="row g-4">
                                 <div class="col-md-6" style="min-height: 350px;">
                                     <div class="position-relative h-100">
-                                        <img class="position-absolute rounded w-100 h-100" src="img/service-4.jpg"
+                                        <img class="position-absolute rounded w-100 h-100" src="img/service-1.jpg"
                                             style="object-fit: cover;" alt="">
                                     </div>
                                 </div>
@@ -227,7 +227,7 @@
                             <div class="row g-4">
                                 <div class="col-md-6" style="min-height: 350px;">
                                     <div class="position-relative h-100">
-                                        <img class="position-absolute rounded w-100 h-100" src="img/service-2.jpg"
+                                        <img class="position-absolute rounded w-100 h-100" src="img/service-6.jpg"
                                             style="object-fit: cover;" alt="">
                                     </div>
                                 </div>
@@ -245,7 +245,7 @@
                             <div class="row g-4">
                                 <div class="col-md-6" style="min-height: 350px;">
                                     <div class="position-relative h-100">
-                                        <img class="position-absolute rounded w-100 h-100" src="img/service-2.jpg"
+                                        <img class="position-absolute rounded w-100 h-100" src="img/service-5.jpg"
                                             style="object-fit: cover;" alt="">
                                     </div>
                                 </div>
@@ -267,8 +267,8 @@
     <!-- Service End -->
 
 
-    <!-- Callback Start -->
-    <div class="container-fluid callback mt-5 py-5">
+   <!-- Callback Start -->
+    <div class="container-fluid callback my-5 pt-5">
         <div class="container pt-5">
             <div class="row justify-content-center">
                 <div class="col-lg-7">
@@ -276,7 +276,7 @@
                         <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
                             <p class="d-inline-block border rounded text-primary fw-semi-bold py-1 px-3">Get In Touch
                             </p>
-                            <h1 class="display-5 mb-5">Request A Call-Back</h1>
+                            <h1 class="display-5 mb-5">Have a project in mind? Let’s talk.</h1>
                         </div>
                         <div class="row g-3">
                             <div class="col-sm-6">
@@ -311,7 +311,7 @@
                                 </div>
                             </div>
                             <div class="col-12 text-center">
-                                <button class="btn btn-primary w-100 py-3" type="submit">Submit Now</button>
+                                <button class="btn btn-primary w-100 py-3" type="button" onclick="sendToWhatsApp()">Submit Now</button>
                             </div>
                         </div>
                     </div>
@@ -405,6 +405,27 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+		<script>
+  function sendToWhatsApp() {
+    var name = document.getElementById("name").value;
+    var email = document.getElementById("mail").value;
+    var mobile = document.getElementById("mobile").value;
+    var subject = document.getElementById("subject").value;
+    var message = document.getElementById("message").value;
+
+    var whatsappMessage =
+      "*New Project Request from MegaSat-GR Website*" +
+      "%0A%0A" +
+      "*Name:* " + name +
+      "%0A*Email:* " + email +
+      "%0A*Phone:* " + mobile +
+      "%0A*Subject:* " + subject +
+      "%0A*Message:* " + message;
+
+    var whatsappURL = "https://wa.me/2348036100396?text=" + whatsappMessage;
+    window.open(whatsappURL, "_blank");
+  }
+</script>
 </body>
 
 </html>
